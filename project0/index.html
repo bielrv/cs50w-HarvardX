@@ -1,9 +1,75 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Webpage</title>
-    </head>
-    <body>
-        Hello, world!
-    </body>
+
+<head>
+  <link rel="stylesheet" href="master.css">
+  <title>Alda</title>
+  <style>
+    ol>li {
+      color: red;
+    }
+
+    li::before {
+      content: '— ';
+    }
+
+    li::after {
+      content: ' —';
+    }
+
+    p::selection {
+      color: red;
+      background-color: yellow;
+    }
+
+    @media (min-width:500px) {
+      body {
+        background-color: lightgrey;
+      }
+      h1::before{
+        content: "Hello! Nice big screen!"
+      }
+    }
+
+    @media (max-width: 499px) {
+      body {
+        background-color: red;
+      }
+      h1::before{
+        content: "Hello!"
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="alda_logo.png" height="100" width="100" alt="alda fintech bot">
+  <h1></h1>
+  <p>Welcome to my web sandbox</p>
+  <div>
+    Unordered list
+    <ul>
+      <li>Financial advice</li>
+      <li>Tax advice</li>
+      <li>Financial manager</li>
+    </ul>
+    Ordered list
+    <ol>
+      <li>Customer focus</li>
+      <li>Solve the customer issue</li>
+      <li>Excelence</li>
+      <ul>
+        <li>Inside</li>
+        <li>Outside</li>
+      </ul>
+    </ol>
+  </div>
+  <div class="bottom">
+    <a href="faq.html">FAQ</a>
+    <a href="index.html">home</a>
+    <a href="company.html">Company</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</body>
+
 </html>

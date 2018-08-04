@@ -1,0 +1,25 @@
+h1 {
+color: blue;
+text-align: center;
+}
+p {
+color: grey;
+}
+
+table{
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 100px
+}
+
+tr{
+  border: 1px
+
+}
+td{
+  border: 1px
+}
+
+.bottom{
+  text-align: center;
+}
