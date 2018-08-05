@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="master.css">
+  <link rel="stylesheet" href="variables.css">
   <title>Alda</title>
   <style>
     ol>li {
@@ -22,31 +23,17 @@
       background-color: yellow;
     }
 
-    @media (min-width:500px) {
-      body {
-        background-color: lightgrey;
-      }
-      h1::before{
-        content: "Hello! Nice big screen!"
-      }
-    }
 
-    @media (max-width: 499px) {
-      body {
-        background-color: red;
-      }
-      h1::before{
-        content: "Hello!"
-      }
-    }
   </style>
 </head>
 
 <body>
   <img src="alda_logo.png" height="100" width="100" alt="alda fintech bot">
   <h1></h1>
-  <p>Welcome to my web sandbox</p>
-  <div>
+  <div class="abstract">
+    <p>Welcome to my web sandbox</p>
+  </div>
+  <div id="lists">
     Unordered list
     <ul>
       <li>Financial advice</li>
@@ -64,7 +51,7 @@
       </ul>
     </ol>
   </div>
-  <div class="bottom">
+  <div class="footer">
     <a href="faq.html">FAQ</a>
     <a href="index.html">home</a>
     <a href="company.html">Company</a>

@@ -1,25 +1,53 @@
 h1 {
-color: blue;
-text-align: center;
-}
-p {
-color: grey;
+  color: blue;
+  text-align: center;
 }
 
-table{
+p {
+  color: grey;
+}
+
+table {
   border: 2px solid black;
   border-collapse: collapse;
   width: 100px
 }
 
-tr{
-  border: 1px
-
-}
-td{
+tr {
   border: 1px
 }
 
-.bottom{
+td {
+  border: 1px
+}
+
+.bottom {
   text-align: center;
+}
+
+@media (min-width:500px) {
+  body {
+    background-color: lightgrey;
+  }
+  h1::before {
+    content: "Hello! Nice big screen!"
+  }
+}
+
+@media (max-width: 499px) {
+  body {
+    background-color: red;
+  }
+  h1::before {
+    content: "Hello!"
+  }
+}
+
+#lists {
+  font-weight: bold;
+  text-indent: 1px;
+}
+
+.abstract {
+  font-style: italic;
 }
