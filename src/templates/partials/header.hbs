@@ -1,0 +1,38 @@
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top {{#ifCond body '==' 'present' }}navbar-inverse{{else}}navbar-default{{/ifCond}}">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">XX : Home</a></li>
+          <li><a href="../project0/index.html" title="">00 : Project 0</a></li>
+          <li><a href="../project1/index.html" title="">01 : Project 1</a></li>
+          <li><a href="./project2.html" title="">02 : Project 2</a></li>
+          <li><a href="./project3.html" title="">03 : Project 3</a></li>
+          <li><a href="./final_project.html" title="">04 : Final project</a></li>
+        </ul>
+
+        {{#ifCond work '==' 'present' }}
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./index.html" title="" class="active">001</a></li>
+            <li><a href="./index.html" title="">002</a></li>
+            <li><a href="./index.html" title="">003</a></li>
+            <li><a href="./index.html" title="">004</a></li>
+            <li><a href="./index.html" title="">005</a></li>
+            <li><a href="./index.html" title="">006</a></li>
+          </ul>
+
+        {{/ifCond}}
+
+      </div>
+    </div>
+  </nav>
+</header>
