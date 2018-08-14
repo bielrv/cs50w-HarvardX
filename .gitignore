@@ -1,3 +1,4 @@
 *.zip
 *.srt
 /venv/
+/node_modules/
