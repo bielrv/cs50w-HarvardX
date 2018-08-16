@@ -29,6 +29,20 @@ db = scoped_session(sessionmaker(bind=engine))
 def index():
     return render_template("index.html")
 
+@app.route("/register",methods=["POST"])
+def register():
+    username = request.form.get("username")
+    email = request.form.get("email")
+    password = request.form.get("password")
+    repassword = request.form.get("repassword")
+    
+    return render_template("registered.html",username=username)
+
+@app.route("/login",methods=["POST"])
+def login():
+    name = request.form.get("name")
+    return render_template("hello.html",name=name)
+
 @app.route("/hello",methods=["POST"])
 def hello():
     name = request.form.get("name")
