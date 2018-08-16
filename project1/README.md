@@ -4,24 +4,25 @@ CS50W - Web Programming with Python and JavaScript
 
 ## 1. Objectives
 
--   Become more comfortable with __Python 3__.
--   Gain experience with __Flask__.
--   Learn to use __SQL__ to interact with databases.
+-   Become more comfortable with **Python 3**.
+-   Gain experience with **Flask**.
+-   Learn to use **SQL** to interact with databases.
 
 ## 2. Overview
 
 In this project, you’ll build a book review website. Users will be able to register for your website and then log in using their username and password. Once they log in, they will be able to search for books, leave reviews for individual books, and see the reviews made by other people. You’ll also use the a third-party API by Goodreads, another book review website, to pull in ratings from a broader audience. Finally, users will be able to query for book details and book reviews programmatically via your website’s API.
+
 ## 3. Getting Started
 
-1. Move to project 1 directory  
-`cd project1`  
-2. For the flask script to work, the application needs to be discovered.  
-`export FLASK_APP=application.py`  
-3. In order to use Heroku database, the data base url also need to be discovered.  
-`export DATABASE_URL=postgres://ficpljxencvllu:f3ece79580b1452c6f01aaccbe5120703ac6bf59652b3871ef2b7f76ed443d1e@ec2-54-247-79-32.eu-west-1.compute.amazonaws.com:5432/dftm1idkv20mvc`  
-4. Enable Flask debug mode  
-`export FLASK_DEBUG=1`
-5. `flask run`
+1.  Move to project 1 directory  
+    `cd project1`  
+2.  For the flask script to work, the application needs to be discovered.  
+    `export FLASK_APP=application.py`  
+3.  In order to use Heroku database, the data base url also need to be discovered.  
+    `export DATABASE_URL=postgres://ficpljxencvllu:f3ece79580b1452c6f01aaccbe5120703ac6bf59652b3871ef2b7f76ed443d1e@ec2-54-247-79-32.eu-west-1.compute.amazonaws.com:5432/dftm1idkv20mvc`  
+4.  Enable Flask debug mode  
+    `export FLASK_DEBUG=1`
+5.  `flask run`
 
 ### PostgreSQL
 
@@ -36,7 +37,6 @@ For this project, you’ll need to set up a PostgreSQL database to use with our 
 7.  Now, click the “Heroku Postgres :: Database” link.
 8.  You should now be on your database’s overview page. Click on “Settings”, and then “View Credentials.” This is the information you’ll need to log into your database. You can access the database via Adminer, filling in the server (the “Host” in the credentials list), your username (the “User”), your password, and the name of the database, all of which you can find on the Heroku credentials page.
     Alternatively, if you install PostgreSQL on your own computer, you should be able to run psql URI on the command line, where the URI is the link provided in the Heroku credentials list.
-
 
 ## Requirements
 
@@ -72,43 +72,53 @@ Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intenti
 
 Required directories structure:
 
-```
-/app
-    - application.py
-    /services
-        - app.py
-    /templates
-        - mainpage.html
-    /static
-        /styles
-            - styles.css
-```
+    /app
+        - application.py
+        /services
+            - app.py
+        /templates
+            - mainpage.html
+        /static
+            /styles
+                - styles.css
+
 In order to set .css styles with flask when rendering websites insert the following code in the .html file to be styled:  
-```<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">```  
+
+`<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">`  
 
 ## [Jinja2](http://jinja.pocoo.org/)
+
 Jinja2 is a full featured template engine for Python. It has full unicode support, an optional integrated sandboxed execution environment, widely used and BSD licensed.
+
 ## PostgreSQL
 
 ### [Heroku](https://data.heroku.com/)
+
 Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.  
+
 ### [Postgresql-client](postgresql.org)
-To __install__ in a linux computer:  
-```
-sudo apt-get install postgresql-client
-```   
-To __connect__, call psql with the -h option to specify the server’s hostname, -U to specify the username, and then the database name:
-```
-psql -h ec2-54-247-79-32.eu-west-1.compute.amazonaws.com -U ficpljxencvllu dftm1idkv20mvc
-```
-To __create accounts table__ run:
-```
-CREATE TABLE accounts(
- user_id serial PRIMARY KEY,
- username VARCHAR (50) UNIQUE NOT NULL,
- password VARCHAR (50) NOT NULL,
- email VARCHAR (355) UNIQUE NOT NULL,
- created_on TIMESTAMP NOT NULL,
- last_login TIMESTAMP
-);
-```
+
+To **install** in a linux computer:  
+
+    sudo apt-get install postgresql-client
+
+To **connect**, call psql with the -h option to specify the server’s hostname, -U to specify the username, and then the database name:
+
+    psql -h ec2-54-247-79-32.eu-west-1.compute.amazonaws.com -U ficpljxencvllu dftm1idkv20mvc
+
+To **create accounts table** run:
+
+    CREATE TABLE accounts(
+     user_id serial PRIMARY KEY,
+     username VARCHAR (50) UNIQUE NOT NULL,
+     password VARCHAR (50) NOT NULL,
+     email VARCHAR (355) UNIQUE NOT NULL,
+     created_on TIMESTAMP NOT NULL,
+     last_login TIMESTAMP
+    );
+
+* * *
+
+Useful python commands:  
+
+`pip freeze > requirements.txt`
