@@ -1,12 +1,20 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block heading %} Welcome to my book reviews website! {% endblock %} {% block body %}
+<input type='checkbox' id='form-switch'>
 
-{% block heading %}
-  Welcome!
-{% endblock %}
+<form id='login-form' action="{{ url_for('login') }}" method='post'>
+  <input type="text" placeholder="Username" required>
+  <input type="password" placeholder="Password" required>
+  <button type='submit'>Login</button>
+  <label for='form-switch'><span>Register</span></label>
+</form>
 
-{% block body %}
-  <form class="main-form" action="{{ url_for('hello') }}" method="post">
-    <input type="text" name="name" placeholder="Enter your name">
-    <button type="button" name="button">Submit</button>
-  </form>
+<form id='register-form' action="{{ url_for('register') }}" method='post'>
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <input type="password" name="repassword" placeholder="Re Password" required>
+  <button type='submit'>Register</button>
+  <label for='form-switch'>Already Member ? Sign In Now..</label>
+</form>
+
 {% endblock %}
