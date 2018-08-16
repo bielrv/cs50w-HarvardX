@@ -2,5 +2,5 @@
 *.srt
 /venv/
 /node_modules/
-__pycache__
+/__pycache__/
 .DS_Store
