@@ -75,7 +75,7 @@ def login():
     username = request.form.get("username")
     password = request.form.get("password")
     if user_match(username,password):
-        return render_template("hello.html",name=name)
+        return render_template("hello.html",name=username)
     elif not username_exists(username):
         text = "Username " + username + " does no exist"
         return render_template("index.html",text=text)
