@@ -39,7 +39,7 @@
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.7.0",
     "html-webpack-plugin": "^2.29.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^2.1.6",
     "preload-webpack-plugin": "^1.2.2",
     "recursive-readdir-sync": "^1.0.6",
