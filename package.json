@@ -51,7 +51,7 @@
     "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "dotenv-webpack": "^1.5.4",
     "hoek": "^5.0.4",
     "jquery": "^3.3.1",
